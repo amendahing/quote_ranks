@@ -1,0 +1,21 @@
+<button (click)="addQuote(id)">Add New Quote</button>
+
+<p>Quotes by {{full_name}}</p>
+
+<table style="width:80%; text-align: center">
+  <tr>
+    <th>Quote</th>
+    <th>Votes</th>
+    <th>Actions Available</th>
+  </tr>
+
+  <tr *ngFor="let x of quotes">
+    <td>{{x.cont}}</td>
+    <td>{{x.vote}}</td>
+    <td>
+        <button (click)="voteUp(x._id)">Vote Up</button>
+        <button (click)="voteDown(x._id)">Vote Down</button>
+        <button (click)="deleteQuote(x._id)">delete</button>
+    </td>
+  </tr>
+</table>

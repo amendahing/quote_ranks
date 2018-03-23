@@ -1,0 +1,5 @@
+<form (submit)="addQuote()">
+    <p> {{ newQuote | json }} </p>
+    <input type="text" name="newQuote" placeholder="content" [(ngModel)]="newQuote" />
+    <input type="submit" value="Add Quote" />
+</form>

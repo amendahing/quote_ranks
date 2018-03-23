@@ -1,0 +1,16 @@
+<br>
+
+<div *ngIf="errors" id="error_message">
+    <p>{{ errors }}</p>
+    <!-- <p>{{ errors.full_name.message }}</p> -->
+</div>
+
+
+
+
+<p>Add a new author:</p>
+<form (submit)="addAuthor()">
+    <p> {{ newAuthor | json }} </p>
+    <input type="text" name="newAuthor.full_name" placeholder="Full Name" [(ngModel)]="newAuthor.full_name" />
+    <input type="submit" value="Add Author" />
+</form>

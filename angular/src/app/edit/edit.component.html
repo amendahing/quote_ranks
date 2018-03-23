@@ -1,0 +1,12 @@
+<div *ngIf="errors" id="error_message">
+    <p>{{ errors }}</p>
+</div>
+
+
+<div id="edit-form">
+    <form (submit)="submitEdit()">
+        <p> {{ currentAuthor | json }} </p>
+        <input type="text" [(ngModel)]="currentAuthor.full_name" name="full_name" placeholder="Full Name"/>
+        <input type="submit" value="Submit Edit" />
+    </form>
+</div>
